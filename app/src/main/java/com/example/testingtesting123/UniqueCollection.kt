@@ -10,8 +10,8 @@ class UniqueCollection {
 
     fun get (position: Int) = collection[position]
 
-    fun remove (item: Item){
-        !collection.remove(item)
+    fun remove (item: Item):Boolean{
+        return collection.remove(item)
     }
 
     fun clear () {
