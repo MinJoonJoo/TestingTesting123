@@ -41,4 +41,12 @@ class UniqueCollectionTest {
 
         assert(originalSize == 2 && newSize == 0) {"Items not cleared"}
     }
+
+    @Test
+    fun getItem_ShouldReturnCorrectItem() {
+        collection.addItem(Item("Item1"))
+        collection.addItem(Item("Item2"))
+        val item = collection.get(1)
+        assertEquals("Item2", item.name)
+    }
 }
